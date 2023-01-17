@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Aprendiendo css</h1>
+  <p><i>Cascade style sheet</i> Hoja de estilos</p>
+  <h2 id="temario-css">Temario del curso</h2>
+  <ul>
+    <li><a href="index.html#selectores-basicos">Selectores básicos</a></li>
+    <li><a href="index.html#selectores-combinados">Selectores combinados</a></li>
+  </ul>
+  <hr>
+  <article id="selectores-basicos">
+    <h3>Selectores básicos</h3>
+    <p>Los selectores básicos son los más utilizados en CSS. Son los que nos permiten seleccionar elementos HTML por su nombre, id o clase.</p>
+    <h4>Seleccionar por nombre</h4>
+    <p>Para seleccionar un elemento HTML por su nombre, simplemente escribimos el nombre del elemento seguido de las llaves de apertura y cierre.</p>
+    <p>Por ejemplo, para seleccionar todos los elementos <code>&lt;h1&gt;</code> de la página, escribimos:</p>
+    <pre><code>p { color: red; }</code></pre>
+    <button id="porNombre">Aplicar estilos a todos los párrafos</button>
+    
+    <h4>Seleccionar por id</h4>
+    <p class="enfatizado">Dar estilos por id se considera una mala practica o Antipatrón</p>
+    <p>Para seleccionar un elemento HTML por su id, escribimos el signo de numeral (#) seguido del id del elemento.</p>
+    <p id="identidad" title="Con id='identidad'">Por ejemplo, para seleccionar el elemento con id <code>temario-css</code>, escribimos:</p>
+    <pre><code>#identidad { color: red; }</code></pre>
+    <button id="porIdentidad">Aplicar estilos al párrafo con id="identidad"</button><br>
+    <a href="index.html#temario-css">☝️</a>
+
+    <h4>Seleccionar por clase</h4>
+    <p >Para seleccionar un elemento HTML por su clase, escribimos un punto (.) seguido del nombre de la clase.</p>
+    <p class="clase1" title="Con class='clase1'">Por ejemplo, para seleccionar todos los elementos con clase <code>temario</code>, escribimos:</p>
+    <pre><code>.temario { color: red; }</code></pre>
+    <button id="porClase">Aplicar estilos a los párrafos con class="clase1"</button><br>
+    <a href="index.html#temario-css">☝️</a>
+    
+    <h4>Seleccionar por atributo</h4>
+    <p>Para seleccionar un elemento HTML por un atributo, escribimos el nombre del atributo seguido de un signo igual (=) y el valor del atributo entre comillas.</p>
+    <p>Por ejemplo, para seleccionar todos los elementos <code>&lt;img&gt;</code> que tengan el atributo <code>src</code> con valor <code>logo.png</code>, escribimos:</p>
+    <pre><code>img[src="assets/dibu.jpg"] { width: 200px; }</code></pre>
+    <img src="assets/dibu.jpg" title="atributo src='assets/dibu.jpg'">
+    <img src="assets/Juanito.JPG" title="SIN atributo src='assets/dibu.jpg'">
+    <button id="porAtributo">Aplicar estilos a las imagenes con atributo src="dibu.jpg"</button><br>
+  </article>
+  <a href="index.html#temario-css">☝️</a>
+  <script src="js.js"></script>
+</body>
+</html>

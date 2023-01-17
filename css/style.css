@@ -1,0 +1,29 @@
+/* Una regla css consta de dos partes
+-El selector: elemento html al que aplicamos el estilo (etiquetas, atributos, identidades, etc)
+-El bloque de declaración: conjunto de propiedades y valores que definen el estilo. Se encierra entre llaves.
+Ejemplo:
+h1 {color: red; font-size: 12px;} */
+
+h1{
+  color: orangered;
+  background-color: skyblue;
+}
+img{
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-bottom: 5px;
+}
+.enfatizado{
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+/* Selectores basicos
+-Elemento: h1, p, div, span, etc
+-Clase: .nombreClase
+-Id: #nombreId */
+
+.red-text{
+  color: red;
+}
