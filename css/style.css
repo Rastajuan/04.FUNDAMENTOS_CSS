@@ -1,3 +1,43 @@
+html{
+  scroll-behavior: smooth; /* Para que el scroll sea suave */
+}
+
+/* Enlaces de la documentación de CSS:
+  - https://es.wikipedia.org/wiki/Hoja_de...
+
+  - https://www.w3.org/html/logo/
+
+  - https://www.w3.org/standards/webdesig...
+
+  - https://www.w3.org/TR/css-2020/
+
+  - https://developer.mozilla.org/es/docs...
+
+🔵 CSS Reference - https://cssreference.io/
+
+🔵 Can I Use - https://caniuse.com/
+
+🔵 Code Guide - https://codeguide.co/
+
+🔵 Pseudoclases - https://developer.mozilla.org/es/docs...
+
+🔵 Pseudoelementos - https://developer.mozilla.org/es/docs...
+
+🔵 Propiedades hederables - https://web.dev/learn/css/inheritance...
+
+🔵 Reset CSS - https://meyerweb.com/eric/tools/css/r...
+
+🔵 Normalize CSS - https://necolas.github.io/normalize.css/
+
+🔵 Autoprefixer CSS - https://autoprefixer.github.io/
+
+🔵 Modelo de Caja - https://developer.mozilla.org/es/docs...
+
+🔵 Tamaño de Caja Paul Irish - https://www.paulirish.com/2012/box-si...
+
+🔵 960 Grid System - https://960.gs/ */
+
+
 /* Una regla css consta de dos partes
 -El selector: elemento html al que aplicamos el estilo (etiquetas, atributos, identidades, etc)
 -El bloque de declaración: conjunto de propiedades y valores que definen el estilo. Se encierra entre llaves.
@@ -7,6 +47,10 @@ h1 {color: red; font-size: 12px;} */
 h1{
   color: orangered;
   background-color: skyblue;
+}
+h3{
+  color: blue;
+  
 }
 img{
   width: 150px;
@@ -26,4 +70,9 @@ img{
 
 .red-text{
   color: red;
+}
+
+/* SELECTORES AVANZADOS */
+.hijosDirectos>li{
+  background-color: red;
 }

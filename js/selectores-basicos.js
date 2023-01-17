@@ -25,7 +25,7 @@ window.onload = function () {
       }
     });
 
-  // Cambia estilo de párrafos por clase
+  // Cambia estilo de párrafos por clase permite cambiar el estilo de todos los elementos que tengan la misma clase y reutilizar el código
   document.getElementById("porClase").addEventListener("click", function () {
     let elementos = document.getElementsByClassName("clase1");
     for (let i = 0; i < elementos.length; i++) {

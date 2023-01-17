@@ -1,54 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Aprendiendo css</h1>
-  <p><i>Cascade style sheet</i> Hoja de estilos</p>
-  <h2 id="temario-css">Temario del curso</h2>
-  <ul>
-    <li><a href="index.html#selectores-basicos">Selectores básicos</a></li>
-    <li><a href="index.html#selectores-combinados">Selectores combinados</a></li>
-  </ul>
-  <hr>
-  <article id="selectores-basicos">
-    <h3>Selectores básicos</h3>
-    <p>Los selectores básicos son los más utilizados en CSS. Son los que nos permiten seleccionar elementos HTML por su nombre, id o clase.</p>
-    <h4>Seleccionar por nombre</h4>
-    <p>Para seleccionar un elemento HTML por su nombre, simplemente escribimos el nombre del elemento seguido de las llaves de apertura y cierre.</p>
-    <p>Por ejemplo, para seleccionar todos los elementos <code>&lt;h1&gt;</code> de la página, escribimos:</p>
-    <pre><code>p { color: red; }</code></pre>
-    <button id="porNombre">Aplicar estilos a todos los párrafos</button>
-    
-    <h4>Seleccionar por id</h4>
-    <p class="enfatizado">Dar estilos por id se considera una mala practica o Antipatrón</p>
-    <p>Para seleccionar un elemento HTML por su id, escribimos el signo de numeral (#) seguido del id del elemento.</p>
-    <p id="identidad" title="Con id='identidad'">Por ejemplo, para seleccionar el elemento con id <code>temario-css</code>, escribimos:</p>
-    <pre><code>#identidad { color: red; }</code></pre>
-    <button id="porIdentidad">Aplicar estilos al párrafo con id="identidad"</button><br>
-    <a href="index.html#temario-css">☝️</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- CABECERA DE LA WEB -->
+    <article id="temario-css">
+      <h1>Temario CSS</h1>
+      <p>
+        En este curso aprenderás a utilizar CSS para dar estilos a tus páginas
+        web.
+      </p>
+      <p>Los temas que veremos son:</p>
+      <ul>
+        <li><a href="#selectores-basicos">Selectores básicos</a></li>
+        <li><a href="#selectores-avanzados">Selectores avanzados</a></li>
+      </ul>
+    </article>
+    <hr />
+    <hr />
+    <!-- SELECTORES BASICOS -->
+    <article id="selectores-basicos">
+      <h2>Selectores básicos</h2>
+      <p>
+        Los selectores básicos son los más utilizados en CSS. Son los que nos
+        permiten seleccionar elementos HTML por su nombre, id o clase.
+      </p>
+      <h3>Seleccionar por nombre</h3>
+      <p>
+        Para seleccionar un elemento HTML por su nombre, simplemente escribimos
+        el nombre del elemento seguido de las llaves de apertura y cierre.
+      </p>
+      <p>
+        Por ejemplo, para seleccionar todos los elementos
+        <code>&lt;h1&gt;</code> de la página, escribimos:
+      </p>
+      <pre><code>p { color: red; }</code></pre>
+      <button id="porNombre">Aplicar estilos a todos los párrafos</button>
 
-    <h4>Seleccionar por clase</h4>
-    <p >Para seleccionar un elemento HTML por su clase, escribimos un punto (.) seguido del nombre de la clase.</p>
-    <p class="clase1" title="Con class='clase1'">Por ejemplo, para seleccionar todos los elementos con clase <code>temario</code>, escribimos:</p>
-    <pre><code>.temario { color: red; }</code></pre>
-    <button id="porClase">Aplicar estilos a los párrafos con class="clase1"</button><br>
-    <a href="index.html#temario-css">☝️</a>
-    
-    <h4>Seleccionar por atributo</h4>
-    <p>Para seleccionar un elemento HTML por un atributo, escribimos el nombre del atributo seguido de un signo igual (=) y el valor del atributo entre comillas.</p>
-    <p>Por ejemplo, para seleccionar todos los elementos <code>&lt;img&gt;</code> que tengan el atributo <code>src</code> con valor <code>logo.png</code>, escribimos:</p>
-    <pre><code>img[src="assets/dibu.jpg"] { width: 200px; }</code></pre>
-    <img src="assets/dibu.jpg" title="atributo src='assets/dibu.jpg'">
-    <img src="assets/Juanito.JPG" title="SIN atributo src='assets/dibu.jpg'">
-    <button id="porAtributo">Aplicar estilos a las imagenes con atributo src="dibu.jpg"</button><br>
-  </article>
-  <a href="index.html#temario-css">☝️</a>
-  <script src="js/basicos.js"></script>
-</body>
+      <h3>Seleccionar por id</h3>
+      <p class="enfatizado">
+        Dar estilos por id se considera una mala practica o Antipatrón
+      </p>
+      <p>
+        Para seleccionar un elemento HTML por su id, escribimos el signo de
+        numeral (#) seguido del id del elemento.
+      </p>
+      <p id="identidad" title="Con id='identidad'">
+        Por ejemplo, para seleccionar el elemento con id
+        <code>temario-css</code>, escribimos:
+      </p>
+      <pre><code>#identidad { color: red; }</code></pre>
+      <button id="porIdentidad">
+        Aplicar estilos al párrafo con id="identidad"</button
+      ><br />
+      <a href="index.html#temario-css">☝️</a>
+
+      <h3>Seleccionar por clase</h3>
+      <p>
+        Para seleccionar un elemento HTML por su clase, escribimos un punto (.)
+        seguido del nombre de la clase.
+      </p>
+      <p class="clase1" title="Con class='clase1'">
+        Por ejemplo, para seleccionar todos los elementos con clase
+        <code>temario</code>, escribimos:
+      </p>
+      <pre><code>.temario { color: red; }</code></pre>
+      <button id="porClase">
+        Aplicar estilos a los párrafos con class="clase1"</button
+      ><br />
+      <a href="index.html#temario-css">☝️</a>
+
+      <h3>Seleccionar por atributo</h3>
+      <p>
+        Para seleccionar un elemento HTML por un atributo, escribimos el nombre
+        del atributo seguido de un signo igual (=) y el valor del atributo entre
+        comillas.
+      </p>
+      <p>
+        Por ejemplo, para seleccionar todos los elementos
+        <code>&lt;img&gt;</code> que tengan el atributo <code>src</code> con
+        valor <code>logo.png</code>, escribimos:
+      </p>
+      <pre><code>img[src="assets/dibu.jpg"] { width: 200px; }</code></pre>
+      <img src="assets/dibu.jpg" title="atributo src='assets/dibu.jpg'" />
+      <img
+        src="assets/Juanito.JPG"
+        title="SIN atributo src='assets/dibu.jpg'"
+      />
+      <button id="porAtributo">
+        Aplicar estilos a las imagenes con atributo src="dibu.jpg"</button
+      ><br />
+      <a href="index.html#temario-css">☝️</a>
+    </article>
+    <br />
+    <hr />
+    <hr />
+    <!-- SELECTORES AVANZADOS -->
+    <article id="selectores-avanzados">
+      <h2>Selectores avanzados</h2>
+      <h3>Selectores de hijos</h3>
+      <h4>Selectores de hijos directos</h4>
+      <p>
+        Para seleccionar un elemento HTML que sea hijo directo de otro elemento,
+        escribimos el nombre del elemento padre seguido de un mayor que (>) y el
+        nombre del elemento hijo. Por ejemplo,para seleccionar todos los hijos
+        de una lista desordenada, los li, escribimos: ul > li { color: red; }.
+        En este caso, solo se aplicarán los estilos a los elementos li que sean
+        hijos directos de ul. Si el elemento li está dentro de otro elemento, no
+        se aplicarán los estilos, ni siquiera si el elemento padre es ul. Esta
+        tabla tiene un elemento {b} dentro de los {li}, pero no es hijo directo
+        de {ul}, por lo que no se aplicarán los estilos. En el ejemplo vamos
+        acambiar el color de fondo de los elementos {li} que sean hijos directos
+        de {ul}.
+      </p>
+      <code>
+        <ul class="hijosDirectos">
+          <li><b>Elemento 1</b></li>
+          <li><b>Elemento 2</b></li>
+          <li><b>Elemento 3</b></li>
+          <li>Elemento 4</li>
+          <li>Elemento 5</li>
+          <li>Elemento 6</li>
+        </ul>
+      </code>
+      <button id="btnHijosDirectos">
+        Aplicar estilos a los hijos directos del elemento {ul}</button><br />
+
+      <h4>Selectores de hijos descendientes</h4>
+
+      <a href="index.html#temario-css">☝️</a>
+    </article>
+    <script src="js/selectores-basicos.js"></script>
+    <script src="js/selectores-avanzados.js"></script>
+  </body>
 </html>
