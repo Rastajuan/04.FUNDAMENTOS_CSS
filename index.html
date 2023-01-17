@@ -19,6 +19,12 @@
       <ul>
         <li><a href="#selectores-basicos">Selectores básicos</a></li>
         <li><a href="#selectores-avanzados">Selectores avanzados</a></li>
+        <li><a href="#pseudoclases">Pseudoclases</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
       </ul>
     </article>
     <hr />
@@ -37,7 +43,7 @@
       </p>
       <p>
         Por ejemplo, para seleccionar todos los elementos
-        <code>&lt;h1&gt;</code> de la página, escribimos:
+        <code>&lt;p&gt;</code> de la página, escribimos:
       </p>
       <pre><code>p { color: red; }</code></pre>
       <button id="porNombre">Aplicar estilos a todos los párrafos</button>
@@ -58,7 +64,7 @@
       <button id="porIdentidad">
         Aplicar estilos al párrafo con id="identidad"</button
       ><br />
-      <a href="index.html#temario-css">☝️</a>
+      <a href="index.html#temario-css">🔝</a>
 
       <h3>Seleccionar por clase</h3>
       <p>
@@ -73,7 +79,7 @@
       <button id="porClase">
         Aplicar estilos a los párrafos con class="clase1"</button
       ><br />
-      <a href="index.html#temario-css">☝️</a>
+      <a href="index.html#temario-css">🔝</a>
 
       <h3>Seleccionar por atributo</h3>
       <p>
@@ -95,7 +101,7 @@
       <button id="porAtributo">
         Aplicar estilos a las imagenes con atributo src="dibu.jpg"</button
       ><br />
-      <a href="index.html#temario-css">☝️</a>
+      <a href="index.html#temario-css">🔝</a>
     </article>
     <br />
     <hr />
@@ -103,20 +109,18 @@
     <!-- SELECTORES AVANZADOS -->
     <article id="selectores-avanzados">
       <h2>Selectores avanzados</h2>
+
+      <!-- SELECTORES DE HIJOS -->
       <h3>Selectores de hijos</h3>
       <h4>Selectores de hijos directos</h4>
       <p>
         Para seleccionar un elemento HTML que sea hijo directo de otro elemento,
         escribimos el nombre del elemento padre seguido de un mayor que (>) y el
         nombre del elemento hijo. Por ejemplo,para seleccionar todos los hijos
-        de una lista desordenada, los li, escribimos: ul > li { color: red; }.
-        En este caso, solo se aplicarán los estilos a los elementos li que sean
-        hijos directos de ul. Si el elemento li está dentro de otro elemento, no
-        se aplicarán los estilos, ni siquiera si el elemento padre es ul. Esta
-        tabla tiene un elemento {b} dentro de los {li}, pero no es hijo directo
-        de {ul}, por lo que no se aplicarán los estilos. En el ejemplo vamos
-        acambiar el color de fondo de los elementos {li} que sean hijos directos
-        de {ul}.
+        de una lista desordenada, los li, escribimos: ul > li {
+        back-ground-color: red; }. En el ejemplo vamos a cambiar el
+        back-ground-color de los elementos li. Adicionalmente se cambia tambien
+        el color del texto cuando el bgc pasa a negro
       </p>
       <code>
         <ul class="hijosDirectos">
@@ -129,12 +133,187 @@
         </ul>
       </code>
       <button id="btnHijosDirectos">
-        Aplicar estilos a los hijos directos del elemento {ul}</button><br />
+        Aplicar estilos a los hijos directos {li} del elemento {ul}</button
+      ><br />
+      <a href="index.html#temario-css">🔝</a>
 
       <h4>Selectores de hijos descendientes</h4>
+      <p>
+        Para seleccionar un elemento HTML que sea descendiente de otro,
+        escribimos el nombre del elemento padre seguido de un espacio en blanco.
+        En el ejmplo cambiamos el color de los elementos {b} de los 3 primeros
+        {li}. Escribiremos {.hijosDescendientes b{color: blue;} Observa que
+        cambia el color de los {b} sin ser hijos directos del {ul}. Solo cambia
+        el texto de los 3 primeros porque trabajamos sobre la etiqueta {b} y no
+        sobre el {li}
+      </p>
+      <code>
+        <ul class="hijosDescendientes">
+          <li><b>Elemento 1</b></li>
+          <li><b>Elemento 2</b></li>
+          <li><b>Elemento 3</b></li>
+          <li>Elemento 4</li>
+          <li>Elemento 5</li>
+          <li>Elemento 6</li>
+        </ul>
+      </code>
+      <button id="btnHijosDescendientes">
+        Aplicar estilos a los hijos descendientes {b} del elemento {ul}</button
+      ><br />
+      <a href="index.html#temario-css">🔝</a>
 
-      <a href="index.html#temario-css">☝️</a>
+      <!-- SELECTORES DE HERMANOS -->
+      <h3>Selectores de hermanos</h3>
+      <p class="enfatizado">
+        Los selectores de hermanos solo se aplican a los elementos que son
+        hermanos y que están por debajo del elemento de referencia en el código
+        HTML y no a los que se encuentran en posiciones anteriores
+      </p>
+      <h4>Selectores de hermanos (en general)</h4>
+      <p>
+        Para seleccionar un elemento HTML que sea hermano de otro, escribimos la
+        clase seguida del simbolo ~ . En el ejemplo vamos a cambiar el color de
+        los elementos {li} que son hermanos del elemento {li} al que se le añade
+        la clase, en este caso el elemento {li} con el texto "Elemento 3". La
+        clase CSS seria .hermanos-general~li{color: green;}
+      </p>
+
+      <code>
+        <ul>
+          <li><b>Elemento 1</b></li>
+          <li><b>Elemento 2</b></li>
+          <li class="hermanos-general"><b>Elemento 3</b></li>
+          <li>Elemento 4</li>
+          <li>Elemento 5</li>
+          <li>Elemento 6</li>
+        </ul>
+      </code>
+      <a href="index.html#temario-css">🔝</a>
+
+      <h4>Selectores de hermanos adyacentes (el que le sigue)</h4>
+      <p>
+        Para seleccionar un elemento HTML que sea hermano adyacente o inmediato
+        de otro, escribimos la clase seguida del simbolo + . En el ejemplo vamos
+        a cambiar el color de los elementos {li} que son hermanos adyacentes del
+        elemento {li} al que se le añade la clase, en este caso el elemento {li}
+        con el texto "Elemento 3". La clase CSS seria
+        .hermanos-inmediatos+li{color: orange;} Observa que solo cambia el color
+        del elemento {li} que le sigue al elemento {li} con la clase
+        .hermanos-adyacentes
+      </p>
+      <code>
+        <ul>
+          <li><b>Elemento 1</b></li>
+          <li><b>Elemento 2</b></li>
+          <li class="hermanos-inmediatos"><b>Elemento 3</b></li>
+          <li>Elemento 4</li>
+          <li>Elemento 5</li>
+          <li>Elemento 6</li>
+        </ul>
+      </code>
+      <a href="index.html#temario-css">🔝</a>
+
+      <!-- SELECTORES DE ATRIBUTOS -->
+      <h3>Selectores de atributos</h3>
+      <p>
+        Los selectores de atributos nos permiten seleccionar elementos HTML
+        basándonos en el valor de sus atributos. Para ello, escribimos el nombre
+        del atributo entre corchetes. Por ejemplo, para seleccionar todos los
+        elementos que tengan el atributo target con el valor _blank, escribimos
+        [ target="_blank" ]
+      </p>
+      <nav class="selectores-atributos">
+        <ul>
+          <li>
+            <a href="https://www.juanbello.com"
+              >www.juanbello.com sin atributo target:_blank</a
+            >
+          </li>
+          <li>
+            <a href="https://www.ifp.com" target="_blank"
+              >www.ifp.com con atributo target:_blank</a
+            >
+          </li>
+          <li>
+            <a href="http://www.google.es"
+              >www.google.es sin atributo target:_blank</a
+            >
+          </li>
+          <li>
+            <a href="http://www.bing.com" target="_blank"
+              >www.bing.com con atributo target:_blank</a
+            >
+          </li>
+          <li>
+            <a href="https://www.yahoo.com"
+              >www.yahoo.com y sin atributo target:_blank</a
+            >
+          </li>
+          <li>
+            <a href="https://www.google.com" target="_blank"
+              >www.google.com y atributo target:_blank</a
+            >
+          </li>
+          <li>
+            <a
+              class="clase1 menu clase2"
+              href="https://www.google.com"
+              target="_blank"
+              >www.google.com y atributo target:_blank</a
+            >
+          </li>
+          <li>
+            <a
+              class="menu-clase2 otraclase"
+              href="https://www.google.com"
+              target="_blank"
+              >www.google.com y atributo target:_blank</a
+            >
+          </li>
+        </ul>
+      </nav>
     </article>
+
+    <!-- SELECTOR UNIVERSAL -->
+    <h3>Selector Universal (*)</h3>
+    <p>
+      El selector universal (*) selecciona todos los elementos HTML de la página
+      web. Por ejemplo, para cambiar el color de todos los elementos HTML de la
+      página web, escribimos *{color: red;}. Se puede usar de forma interna para
+      los elementos de una clase o id, por ejemplo, para cambiar el tamaño de
+      letras de todos los elementos HTML que estén dentro de un elemento con la
+      clase .selector-universal, escribimos .selector-universal *{font-size:
+      20px;}
+    </p>
+    <code>
+      <ul class="selector-universal">
+        <li><b>Elemento 1</b></li>
+        <li><b>Elemento 2</b></li>
+        <li><b>Elemento 3</b></li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+        <li>Elemento 6</li>
+      </ul>
+    </code>
+    <a href="index.html#temario-css">🔝</a>
+    <hr><hr>
+    
+    <!-- PSEUDOCLASES -->
+    <article id="pseudoclases">
+      <h2>Pseudoclases</h2>
+      <p>Enlace a documentación sobre pseudoclases <a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes" target="_blank">Aqui</a></p>
+      
+      <p>Las pseudoclases en CSS son selectores que se utilizan para seleccionar elementos en un documento HTML basándose en su estado o posición. Sirven para aplicar estilos a elementos específicos sin necesidad de añadir clases o atributos adicionales al HTML. Algunos ejemplos comunes de pseudoclases son :hover (para elementos que el cursor del mouse está sobre ellos), :active (para elementos que están siendo activamente presionados), y :first-child (para el primer elemento hijo de un elemento específico). </p>
+    <form class="form-pseudoclases">
+      <input type="text" placeholder="Escribe tu nombre" required/><br>
+      <input type="text" placeholder="Escribe tu apellido" /><br>
+      <input type="email" placeholder="Escribe tu email" required/><br>
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Reset" disabled/>
+    </form>
+      <a href="index.html#temario-css">🔝</a>
+    </article>
+
     <script src="js/selectores-basicos.js"></script>
     <script src="js/selectores-avanzados.js"></script>
   </body>

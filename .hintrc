@@ -3,7 +3,6 @@
     "development"
   ],
   "hints": {
-    "button-type": "off",
     "compat-api/css": [
       "default",
       {
@@ -11,6 +10,7 @@
           "scroll-behavior"
         ]
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }

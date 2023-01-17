@@ -48,6 +48,9 @@ h1{
   color: orangered;
   background-color: skyblue;
 }
+h2{
+  text-transform: uppercase;
+}
 h3{
   color: blue;
   
@@ -73,6 +76,81 @@ img{
 }
 
 /* SELECTORES AVANZADOS */
+
+/*Hijos directos: .padre>hijo */
 .hijosDirectos>li{
   background-color: red;
+}
+/*Hijos indirectos: .padre hijo */
+.hijosDescendientes b{
+  color: blue;
+}
+/*Hermanos general: .hermano1~hermano2 */
+.hermanos-general~li{
+  color: green;
+}
+/*Hermanos inmediatos: .hermano1+hermano2 */	
+.hermanos-inmediatos+li{
+  color: orange;
+}
+/*Atributos: [atributo] */
+/* Todos los que tengan el atributo href */
+.selectores-atributos a[href]{
+  color: red;
+}
+/* Todos los que tengan el atributo target="_blank" */
+.selectores-atributos a[target="_blank"]{
+  color: orange;
+}
+/* El comodin del asterisco (*) selecciona los que contengan la palabra que sigue */
+.selectores-atributos a[href*="google"]{
+  color: green;
+}
+/* El comodin del (^)  selecciona los que empiecen por la palabra que sigue */
+.selectores-atributos a[href^="http:"]{
+  text-decoration: none;
+}
+
+/*El comodin del ($) selecciona los que terminen por la palabra que sigue */
+.selectores-atributos a[href$=".es"]{
+  background-color: blueviolet;
+}
+/*El comodin ~ selecciona los que contengan la palabra que sigue en cualquier parte del atributo en una cadena con espacios en blanco */
+.selectores-atributos a[class~="menu"]{
+  color: aquamarine;
+}
+
+/* El comodin | selecciona los que empiecen por la palabra que sigue seguida de un guión (-) */
+.selectores-atributos a[class|="menu"]{
+  font-size: xx-small;
+}
+
+/*Selector universal: * */
+.selector-universal *{
+  font-size: 20px;
+}
+
+/* PSEUDOCLASES */
+/* :link, :visited, :hover, :active, :focus, :target, :lang, :enabled, :disabled, :checked, :indeterminate, :root, :nth-child(), :nth-last-child(), :nth-of-type(), :nth-last-of-type(), :first-child, :last-child, :first-of-type, :last-of-type, :only-child, :only-of-type, :empty, :not() */
+
+
+.form-pseudoclases *:required{
+  border-color: violet;
+}
+.form-pseudoclases *:invalid{
+  border: 1px solid red;
+}
+.form-pseudoclases *:valid{
+  border-color: green;
+}
+.form-pseudoclases *:optional{
+  border-color: blue;
+}
+
+.form-pseudoclases *:focus{
+  border-color: orange;
+} 
+
+.form-pseudoclases *:disabled{
+  border-color: pink;
 }
